@@ -1,7 +1,7 @@
 import { type FC } from 'react';
 
-const Article: FC = () => {
-  return <p>Article</p>;
+const Blog: FC = () => {
+  return <p>Blog</p>;
 };
 
-export default Article;
+export default Blog;
