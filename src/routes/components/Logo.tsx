@@ -6,7 +6,7 @@ const title = import.meta.env.VITE_APP_TITLE;
 console.dir(import.meta.env);
 
 interface LogoProps {
-  boxOn: boolean;
+  boxOn?: boolean;
 }
 
 const Logo: FC<LogoProps> = ({ boxOn = false }) => {

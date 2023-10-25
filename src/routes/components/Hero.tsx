@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 interface HeroProps {
   title: string;
   subtitle: string;
-  imageOn: boolean;
+  imageOn?: boolean;
 }
 
 const Hero: FC<HeroProps> = ({ title, subtitle, imageOn = false }) => {
