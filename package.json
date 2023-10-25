@@ -71,5 +71,5 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
-  "homepage": "https://akTARDIGRADE13.github.io/study-room"
+  "homepage": "https://aktardigrade13.github.io/study-room/"
 }
