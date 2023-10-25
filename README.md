@@ -1,7 +1,10 @@
 # 僕の自習室
 自分が勉強したことをまとめておくサイト。
+
 数学、物理、最適化、プログラミング、etc.
+
 React + TypeScript + Viteで作りました。
+
 更新は不定期です。
 
 # React + TypeScript + Vite
