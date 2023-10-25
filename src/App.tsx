@@ -14,7 +14,7 @@ const App: FC = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
-            to="./"
+            to="/study-room/"
           >
             Home
           </NavLink>
@@ -22,7 +22,7 @@ const App: FC = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
-            to="./about"
+            to="/study-room/about"
           >
             About
           </NavLink>
@@ -30,16 +30,16 @@ const App: FC = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
-            to="./blog"
+            to="/study-room/blog"
           >
             Blog
           </NavLink>
         </li>
       </ul>
       <Routes>
-        <Route path="./" element={<Home />} />
-        <Route path="./about" element={<About />} />
-        <Route path="./blog" element={<Blog />} />
+        <Route path="/study-room/" element={<Home />} />
+        <Route path="/study-room/about" element={<About />} />
+        <Route path="/study-room/blog" element={<Blog />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
