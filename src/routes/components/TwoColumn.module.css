@@ -1,6 +1,6 @@
 .flex-container {
   /* stylelint-disable-next-line property-no-unknown */
-  composes: sidebyside from './utils.module.css';
+  composes: side-by-side from './utils.module.css';
   gap: var(--space-md);
   margin: var(--space-md) 0 var(--space-lg);
 }
