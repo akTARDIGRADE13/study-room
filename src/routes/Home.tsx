@@ -7,7 +7,7 @@ const Home: FC = () => {
   return (
     <Layout>
       <Container>
-        <Hero title="Home" subtitle="アウトプットしていくサイト" imageOn />
+        <Hero title="Home" subtitle="ようこそ！" imageOn />
       </Container>
     </Layout>
   );

@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+import eyecatch from 'images/about.jpg';
 import Contact from './components/Contact';
 import Container from './components/Container';
 import Hero from './components/Hero';
@@ -11,6 +12,9 @@ const About: FC = () => {
     <Layout>
       <Container>
         <Hero title="About" subtitle="概要" />
+        <figure style={{ textAlign: 'center' }}>
+          <img src={eyecatch} height={'auto'} width={'80%'} alt="ABOUT" />
+        </figure>
         <TwoColumn>
           <TwoColumn type="main">
             <PageBody>

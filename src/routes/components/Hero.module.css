@@ -4,8 +4,7 @@
 }
 
 .text {
-  padding-top: calc(var(--display) * 0.5);
-  padding-bottom: calc(var(--display) * 0.7);
+  padding-top: calc(var(--display) * 0.2);
 }
 
 .title {
@@ -16,4 +15,15 @@
 
 .subtitle {
   font-size: var(--small-heading2);
+}
+
+/* image */
+.image{
+  width:100%;
+}
+
+@media (width >=768px){
+  .image{
+    width: 50%;
+  }
 }
