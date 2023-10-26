@@ -1,0 +1,4 @@
+.flex-container{
+  /* stylelint-disable-next-line property-no-unknown */
+  composes :space-between from './utils.module.css';
+}

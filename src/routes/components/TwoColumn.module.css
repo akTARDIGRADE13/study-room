@@ -1,0 +1,30 @@
+.flex-container {
+  /* stylelint-disable-next-line property-no-unknown */
+  composes: sidebyside from './utils.module.css';
+  gap: var(--space-md);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+@media (width >= 768px) {
+  .main {
+    width: 768px;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+    width: 240px;
+  }
+
+  .sidebar * {
+    text-align: right;
+  }
+
+  .sidebar :is(div, ul) {
+    place-content: flex-end;
+    place-items: flex-end;
+    width: fit-content;
+    margin-left: auto;
+  }
+}

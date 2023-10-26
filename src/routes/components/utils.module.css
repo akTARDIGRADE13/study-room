@@ -1,0 +1,33 @@
+/* 両端揃え */
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 横並び（基本形） */
+.side-by-side {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >= 768px) {
+  .side-by-side {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* 横並び（中央揃え） */
+.side-by-side-center {
+  /* stylelint-disable-next-line property-no-unknown */
+  composes: side-by-side;
+  align-items: center;
+  text-align: center;
+}
+
+@media (width >= 768px) {
+  .side-by-side-center {
+    text-align: left;
+  }
+}

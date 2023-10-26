@@ -5,11 +5,10 @@
 }
 
 .box {
+  /* stylelint-disable-next-line property-no-unknown */
+  composes: basic;
   display: inline-block;
   padding: 1em 2em;
-  font-size: var(--small-heading2);
-  font-weight: 700;
   color: var(--white);
-  letter-spacing: 0.15em;
   background-color: var(--gray-75);
 }

@@ -1,0 +1,10 @@
+.wrapper {
+  padding: var(--space-xl) 0;
+  background-color: var(--gray-10);
+}
+
+.flex-container {
+  /* stylelint-disable-next-line property-no-unknown */
+  composes: side-by-side-center from './utils.module.css';
+  gap: 2em;
+}

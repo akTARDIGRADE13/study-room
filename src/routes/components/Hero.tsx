@@ -9,10 +9,12 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ title, subtitle, imageOn = false }) => {
   return (
-    <div className={styles.text}>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.subtitle}>{subtitle}</p>
-      {imageOn && <figure> [画像] </figure>}
+    <div className={styles['flex-container']}>
+      <div className={styles.text}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
+        {imageOn && <figure> [画像] </figure>}
+      </div>
     </div>
   );
 };
