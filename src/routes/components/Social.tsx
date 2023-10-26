@@ -4,9 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import styles from './Social.module.css';
 
-const Social: FC = () => {
+interface SocialProps {
+  iconSize?: string;
+}
+
+const Social: FC<SocialProps> = ({ iconSize = 'initial' }) => {
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} style={{ '--icon-size': iconSize }}>
       <li>
         <Link to={'https://twitter.com/akTARDIGRADE13'}>
           <FontAwesomeIcon icon={faTwitter} />

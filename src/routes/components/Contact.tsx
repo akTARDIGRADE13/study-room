@@ -6,7 +6,7 @@ const Contact: FC = () => {
   return (
     <div className={styles.stack}>
       <h3 className={styles.heading}>Contact</h3>
-      <Social />
+      <Social iconSize="30px" />
       <address> hogehoge </address>
     </div>
   );
