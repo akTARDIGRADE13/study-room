@@ -10,7 +10,7 @@ interface SocialProps {
 
 const Social: FC<SocialProps> = ({ iconSize = 'initial' }) => {
   return (
-    <ul className={styles.list} style={{ '--icon-size': iconSize }}>
+    <ul className={styles.list} style={{ ['--icon-size' as string]: iconSize }}>
       <li>
         <Link to={'https://twitter.com/akTARDIGRADE13'}>
           <FontAwesomeIcon icon={faTwitter} />
