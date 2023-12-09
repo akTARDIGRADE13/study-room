@@ -16,14 +16,6 @@ const Nav: FC = () => {
       <li>
         <NavLink
           style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
-          to="/study-room/about"
-        >
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
           to="/study-room/blog"
         >
           Blog

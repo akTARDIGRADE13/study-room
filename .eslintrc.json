@@ -75,7 +75,8 @@
           "jsx": "never",
           "ts": "never",
           "tsx": "never",
-          "jpg": "always"
+          "jpg": "always",
+          "json": "always"
         }
       }
     ],

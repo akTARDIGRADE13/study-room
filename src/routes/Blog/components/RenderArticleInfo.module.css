@@ -1,0 +1,47 @@
+.article-card {
+  display: flex;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* 丸い角を作成するための値を調整 */
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.article-image-container {
+  margin-right: 15px;
+}
+
+.article-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-details {
+  flex: 1;
+}
+
+.article-title {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.article-date {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.read-more-link {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-link:hover {
+  background-color: #0056b3;
+}

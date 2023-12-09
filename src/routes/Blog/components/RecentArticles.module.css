@@ -1,0 +1,12 @@
+.article-container {
+  display: flex;
+  flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
+  justify-content: space-between;
+}
+
+/* 画面幅が 768px 以上の場合のスタイル */
+@media (width >= 768px) {
+  .article-container {
+    justify-content: flex-start; /* 左寄せ */
+  }
+}
