@@ -1,6 +1,6 @@
 import type React from 'react';
 import { Link } from 'react-router-dom';
-import { type Article } from 'articles/Article';
+import { type Article } from '../../../Article';
 import styles from './RenderArticleInfo.module.css';
 
 const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
@@ -13,9 +13,6 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
 
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
-
-  // スタイルの確認
-  console.log(styles.articleCard);
 
   return (
     <Link

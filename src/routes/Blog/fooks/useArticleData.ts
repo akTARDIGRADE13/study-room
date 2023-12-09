@@ -1,6 +1,6 @@
 // useArticleData.js
 import { useState, useEffect } from 'react';
-import { type Article } from 'articles/Article';
+import { type Article } from '../../../Article';
 
 const useArticleData = (): Article[] => {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -9,7 +9,7 @@ const useArticleData = (): Article[] => {
     const fetchData = async () => {
       try {
         const data: { default: Article[] } = await import(
-          'articles/articles.json'
+          '../../../../articles/articles.json'
         );
         const sortedArticles = data.default
           .filter((article) => article.publish)
