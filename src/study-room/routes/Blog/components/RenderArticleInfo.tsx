@@ -14,7 +14,9 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
-  const eyecatchImagePath = `/articles/eyecatch/${article.eyecatch}`;
+  const eyecatchImagePath = `${
+    process.env.NODE_ENV === 'production' ? '/study-room' : ''
+  }/articles/eyecatch/${article.eyecatch}`;
 
   return (
     <Link
