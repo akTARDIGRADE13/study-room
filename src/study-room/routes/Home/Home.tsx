@@ -1,10 +1,10 @@
 import { type FC } from 'react';
-import Contact from 'routes/components/Contact';
-import Container from 'routes/components/Container';
-import Hero from 'routes/components/Hero';
-import Layout from 'routes/components/Layout';
-import PageBody from 'routes/components/PageBody';
-import TwoColumn from 'routes/components/TwoColumn';
+import Contact from 'study-room/routes/components/Contact';
+import Container from 'study-room/routes/components/Container';
+import Hero from 'study-room/routes/components/Hero';
+import Layout from 'study-room/routes/components/Layout';
+import PageBody from 'study-room/routes/components/PageBody';
+import TwoColumn from 'study-room/routes/components/TwoColumn';
 
 const Home: FC = () => {
   return (

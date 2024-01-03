@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import study from 'images/study.jpg';
+import study from 'study-room/images/study.jpg';
 import styles from './Hero.module.css';
 
 interface HeroProps {

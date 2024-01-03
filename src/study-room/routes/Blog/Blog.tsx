@@ -1,9 +1,9 @@
 import { type FC } from 'react';
 import { Link } from 'react-router-dom';
-import RecentArticles from 'routes/Blog/components/RecentArticles';
-import Container from 'routes/components/Container';
-import Hero from 'routes/components/Hero';
-import Layout from 'routes/components/Layout';
+import RecentArticles from 'study-room/routes/Blog/components/RecentArticles';
+import Container from 'study-room/routes/components/Container';
+import Hero from 'study-room/routes/components/Hero';
+import Layout from 'study-room/routes/components/Layout';
 
 interface BlogProps {
   categoryNames: string[];

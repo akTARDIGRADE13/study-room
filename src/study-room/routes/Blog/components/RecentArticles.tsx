@@ -1,7 +1,7 @@
 import type React from 'react';
 import { useEffect } from 'react';
-import useArticleData from 'routes/Blog/fooks/useArticleData';
-import RenderArticleInfo from 'routes/Blog/components/RenderArticleInfo';
+import useArticleData from 'study-room/routes/Blog/fooks/useArticleData';
+import RenderArticleInfo from 'study-room/routes/Blog/components/RenderArticleInfo';
 import styles from './RecentArticles.module.css';
 
 const RecentArticles: React.FC<{ n: number }> = ({ n }) => {

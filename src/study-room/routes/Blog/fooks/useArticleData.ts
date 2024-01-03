@@ -9,7 +9,7 @@ const useArticleData = (): Article[] => {
     const fetchData = async () => {
       try {
         const data: { default: Article[] } = await import(
-          '../../../../articles/articles.json'
+          '../../../articles/articles.json'
         );
         const sortedArticles = data.default
           .filter((article) => article.publish)
