@@ -1,6 +1,6 @@
 // useArticleData.js
 import { useState, useEffect } from 'react';
-import { articles } from 'study-room/articles/Data';
+import { articles } from 'study-room/Data';
 import { type Article } from 'study-room/types/Article';
 
 const useArticleData = (): Article[] => {
