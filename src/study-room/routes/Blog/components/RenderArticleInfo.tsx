@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import { type Article } from 'study-room/types/Article';
 import styles from './RenderArticleInfo.module.css';
 
+// パスを正規化するヘルパー関数
+const normalizePath = (path: string): string => {
+  const parts = path.split('/');
+  const normalizedParts = parts.filter((part) => part !== '.' && part !== '..');
+
+  return normalizedParts.join('/');
+};
+
 // 画像を一括で読み込む
 const eyecatchContext = import.meta.glob('../../../images/eyecatch/*.jpg');
 
@@ -20,6 +28,7 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
+  // eyecatchImages から対応するファイルのパスを見つける
   const eyecatchImagePath: string | undefined = eyecatchImages.find(
     (path: string) => path.endsWith(article.eyecatch),
   );
@@ -31,11 +40,19 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
     >
       <div className={styles['article-card']}>
         <div className={styles['article-image-container']}>
-          <img
-            className={styles['article-image']}
-            src={`${eyecatchImagePath}`}
-            alt={article.title}
-          />
+          {eyecatchImagePath !== undefined && eyecatchImagePath !== null ? (
+            <img
+              className={styles['article-image']}
+              src={`${
+                process.env.NODE_ENV === 'production'
+                  ? '/study-room/'
+                  : '/src/study-room/'
+              }${normalizePath(eyecatchImagePath)}`}
+              alt={article.title}
+            />
+          ) : (
+            <p>No Image Found</p>
+          )}
         </div>
         <div
           className={`${styles['article-details']} ${styles['side-by-side-center']}`}
