@@ -5,7 +5,7 @@
     "title": "テスト",
     "publishDate": "2023/10/27",
     "lastUpdatedDate": "2023/12/10",
-    "eyecatch": "articles/eyecatch/0000.jpg",
+    "eyecatch": "images/eyecatch/0000.jpg",
     "category": "その他",
     "publish": true
   },
@@ -15,7 +15,7 @@
     "title": "テスト2",
     "publishDate": "2023/12/09",
     "lastUpdatedDate": "2023/12/10",
-    "eyecatch": "articles/eyecatch/0000.jpg",
+    "eyecatch": "images/eyecatch/0000.jpg",
     "category": "その他",
     "publish": true
   },
@@ -25,7 +25,7 @@
     "title": "テスト3",
     "publishDate": "2023/12/10",
     "lastUpdatedDate": "2023/12/10",
-    "eyecatch": "articles/eyecatch/0000.jpg",
+    "eyecatch": "images/eyecatch/0000.jpg",
     "category": "その他",
     "publish": true
   }
