@@ -33,7 +33,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle, imageOn = false }) => {
             alt="STUDY"
             style={{
               width: getImageWidth(),
-              maxWidth: '576px', // 最大幅
+              maxWidth: '476px', // 最大幅
             }}
           />
         </figure>

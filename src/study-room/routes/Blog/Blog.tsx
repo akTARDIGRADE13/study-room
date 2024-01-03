@@ -1,28 +1,24 @@
 import { type FC } from 'react';
-import { Link } from 'react-router-dom';
-import RecentArticles from 'study-room/routes/Blog/components/RecentArticles';
+import { categoryNames } from 'study-room/Categories';
 import Container from 'study-room/routes/components/Container';
 import Hero from 'study-room/routes/components/Hero';
 import Layout from 'study-room/routes/components/Layout';
+import RecentArticlesByCategory from './components/ RecentArticlesByCategory';
 
-interface BlogProps {
-  categoryNames: string[];
-}
+import styles from './Blog.module.css';
 
-const Blog: FC<BlogProps> = ({ categoryNames }) => {
-  const linkCategories: React.ReactNode = categoryNames.map((item, index) => (
-    <li key={index}>
-      <Link to="/study-room/">{item}</Link>
-    </li>
-  ));
-
+const Blog: FC = () => {
   return (
     <Layout>
       <Container>
         <Hero title="Blog" subtitle="最近の記事" />
+
+        {categoryNames.map((category, index) => (
+          <div key={index} className={styles['category-block']}>
+            <RecentArticlesByCategory category={category} />
+          </div>
+        ))}
       </Container>
-      <RecentArticles n={3} />
-      <ul>{linkCategories}</ul>
     </Layout>
   );
 };

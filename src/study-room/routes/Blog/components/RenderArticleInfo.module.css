@@ -2,6 +2,7 @@
   display: flex;
   padding: 15px;
   margin: 10px;
+  background-color: var(--white);
   border: 1px solid #ddd;
   border-radius: 10px; /* 丸い角を作成するための値を調整 */
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
