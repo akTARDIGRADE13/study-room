@@ -1,7 +1,13 @@
 import type React from 'react';
 import { Link } from 'react-router-dom';
-import { type Article } from '../../../types/Article';
+import { type Article } from 'study-room/types/Article';
 import styles from './RenderArticleInfo.module.css';
+
+// 画像を一括で読み込む
+const eyecatchContext = import.meta.glob('../../../images/eyecatch/*.jpg');
+
+// eyecatchContext からパスの一覧を取得
+const eyecatchImages: string[] = Object.keys(eyecatchContext);
 
 const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
   const formatDate = (dateString: string) => {
@@ -14,6 +20,10 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
+  const eyecatchImagePath: string | undefined = eyecatchImages.find(
+    (path: string) => path.endsWith(article.eyecatch),
+  );
+
   return (
     <Link
       to={`/study-room/blog/${article.category}/${article.id}`}
@@ -23,11 +33,7 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
         <div className={styles['article-image-container']}>
           <img
             className={styles['article-image']}
-            src={`${
-              process.env.NODE_ENV === 'production'
-                ? '/study-room/'
-                : '/src/study-room/'
-            }${article.eyecatch}`}
+            src={`${eyecatchImagePath}`}
             alt={article.title}
           />
         </div>
