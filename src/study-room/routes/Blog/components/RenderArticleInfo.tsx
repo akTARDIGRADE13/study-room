@@ -23,7 +23,11 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
         <div className={styles['article-image-container']}>
           <img
             className={styles['article-image']}
-            src={article.eyecatch}
+            src={`${
+              process.env.NODE_ENV === 'production'
+                ? '/study-room/'
+                : '/src/study-room/'
+            }${article.eyecatch}`}
             alt={article.title}
           />
         </div>
