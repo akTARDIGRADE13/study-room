@@ -7,11 +7,10 @@ import Layout from 'study-room/routes/components/Layout';
 import { useMdContent } from './hooks/useMdContent';
 
 const BlogArticle: React.FC = () => {
-  const { category, id } = useParams<{ category: string; id: string }>();
-  const paddedId = String(id).padStart(4, '0');
+  const { category, md } = useParams<{ category: string; md: string }>();
   const mdPath = `${
     process.env.NODE_ENV === 'production' ? '/study-room' : ''
-  }/articles/md/${paddedId}.md`;
+  }/articles/md/${md}`;
 
   const markdownContent = useMdContent(mdPath);
 
