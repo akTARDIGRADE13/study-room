@@ -1,6 +1,6 @@
 import type React from 'react';
 import { Link } from 'react-router-dom';
-import { type Article } from '../../../Article';
+import { type Article } from '../../../types/Article';
 import styles from './RenderArticleInfo.module.css';
 
 const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
