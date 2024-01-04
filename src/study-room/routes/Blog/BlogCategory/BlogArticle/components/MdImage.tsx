@@ -17,7 +17,15 @@ const MdImage: FC<MdImageProps> = (props) => {
 
   return (
     <div style={containerStyle}>
-      <img src={src} alt={alt} title={title} {...rest} style={imageStyle} />
+      <img
+        src={`${
+          process.env.NODE_ENV === 'production' ? '/study-room' : ''
+        }${src}`}
+        alt={alt}
+        title={title}
+        {...rest}
+        style={imageStyle}
+      />
     </div>
   );
 };
