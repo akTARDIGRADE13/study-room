@@ -6,12 +6,15 @@
   --gray-50: #707070;
   --gray-75: #444;
   --black: #222;
+  --light-accent: #4caaed;
   --accent: #0d87e0;
+  --dark-accent: #005580;
 
   /* タイポグラフィ（フォントサイズ） */
-  --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --small-body: clamp(0.8rem, 0.95rem + 0.2vw, 1.0rem);
+  --body: clamp(1.5rem, 0.95rem + 0.2vw, 2.0rem);
   --display: clamp(4.5rem, 1.83rem + 11.34vw, 7rem);
-  --heading1: clamp(2rem, 1.3rem + 3vw, 4rem);
+  --heading1: clamp(2rem, 1.3rem + 3vw, 3rem);
   --heading2: calc(var(--body) * 1.5);
   --heading3: calc(var(--body) * 1.2);
   --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem);

@@ -1,9 +1,9 @@
-import { type FC } from 'react';
+import type React from 'react';
 import { NavLink } from 'react-router-dom';
 import { categoryNames } from 'study-room/Categories';
 import styles from './Nav.module.css';
 
-const Nav: FC = () => {
+const Nav: React.FC = () => {
   return (
     <ul className={styles.list}>
       <li>
@@ -14,25 +14,28 @@ const Nav: FC = () => {
           Home
         </NavLink>
       </li>
-      <li>
+      <li className={styles['category-name']}>
         <NavLink
           style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
           to="/study-room/blog"
         >
           Blog
         </NavLink>
+        <div className={styles['sub-menu']}>
+          {/* カテゴリーごとのリンク */}
+          {categoryNames.map((category, index) => (
+            <NavLink
+              key={index}
+              style={({ isActive }) =>
+                isActive ? { color: 'blue' } : undefined
+              }
+              to={`/study-room/blog/${category}`}
+            >
+              {category}
+            </NavLink>
+          ))}
+        </div>
       </li>
-      {/* カテゴリー名に基づいて動的にNavLinkを生成 */}
-      {categoryNames.map((category, index) => (
-        <li key={index}>
-          <NavLink
-            style={({ isActive }) => (isActive ? { color: 'blue' } : undefined)}
-            to={`/study-room/blog/${category}`}
-          >
-            {category}
-          </NavLink>
-        </li>
-      ))}
     </ul>
   );
 };

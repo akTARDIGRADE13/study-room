@@ -21,7 +21,7 @@ const App: FC = () => {
         <Route path="/study-room/blog/" element={<Blog />} />
         <Route path="/study-room/blog/:category" element={<BlogCategory />} />
         <Route
-          path="/study-room/blog/:category/:md"
+          path="/study-room/blog/:category/:id"
           element={<BlogArticle />}
         />
 

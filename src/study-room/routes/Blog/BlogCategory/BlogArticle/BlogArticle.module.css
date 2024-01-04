@@ -1,0 +1,58 @@
+
+.article-wrapper{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+  
+.article-title {
+    padding: 10px; /* タイトルの周りに余白を追加 */
+    font-weight: bold; /* 太字にする */
+    color: #333; /* タイトルの色を変更する */
+    background-color: #f0f0f0; /* タイトルの背景色 */
+    border: 2px solid #ddd; /* タイトルを囲む境界線 */
+    border-radius: 5px; /* タイトルを囲む境界線の角を丸くする */
+
+    /* 他にも適用したいスタイルがあれば追加してください */
+  }
+  
+  .content {
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--body);
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* 見出しスタイル */
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding-bottom: 8px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    color: var(--gray-75);
+    border-bottom: 2px solid var(--gray-75);
+  }
+  
+  /* リンクスタイル */
+  .content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+  
+  .content a:hover {
+    color: var(--dark-accent);
+    border-bottom-color: var(--dark-accent);
+  }
+  
+  /* リストスタイル */
+  .content ul,
+  .content ol {
+    margin-left: 20px;
+  }
+  

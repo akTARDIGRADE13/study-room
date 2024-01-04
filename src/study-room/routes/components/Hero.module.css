@@ -1,6 +1,12 @@
 .flex-container{
   /* stylelint-disable-next-line property-no-unknown */
-  composes: side-by-side-center from './utils.module.css' 
+  composes: side-by-side-center from './utils.module.css';
+  padding: var(--space-xs); /* 上下左右の余白調整 */
+  color: var(--gray-50); /* テキストの色を黒に変更 */
+  text-align: center;
+  border: 1px solid #ddd; /* 軽いボーダーを追加 */
+  border-radius: 8px; /* 角を丸くする */
+  box-shadow: 0 6px 12px rgb(0 0 0 / 10%); /* 影を追加して浮き出し感を持たせる */
 }
 
 .text {
@@ -8,22 +14,26 @@
 }
 
 .title {
+  margin-bottom: var(--space-xs); /* タイトルの下の余白調整 */
   font-size: var(--display);
-  font-weight: 900;
-  letter-spacing: 0.15em;
+  color: var(--accent); /* アクセントカラーをタイトルに適用 */
+  letter-spacing: 0.02em; /* より細かい文字間隔に変更 */
 }
 
 .subtitle {
+  margin-bottom: var(--space-xs); /* サブタイトルの下の余白調整 */
   font-size: var(--small-heading2);
 }
 
 /* image */
-.image{
-  width:100%;
+.image {
+  width: 50%;
+  margin-top: var(--space-xs); /* 画像上部の余白調整 */
+  border-radius: 8px; /* 画像の角を丸くする */
 }
 
-@media (width >=768px){
-  .image{
+@media (width >= 768px) {
+  .image {
     width: 50%;
   }
 }

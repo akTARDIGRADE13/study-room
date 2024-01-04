@@ -1,4 +1,6 @@
 .flex-container{
   /* stylelint-disable-next-line property-no-unknown */
   composes :space-between from './utils.module.css';
+  padding-bottom: 10px; /* ボーダーラインからの距離を調整できます */
+  border-bottom: 1px solid var(--gray-25); /* ボーダーラインのスタイル（色、太さなど）を調整できます */
 }

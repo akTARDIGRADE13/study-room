@@ -24,7 +24,7 @@ export const articles: Article[] = [
   },
   {
     id: 2,
-    md: '0002.md',
+    md: '0000.md',
     title: '白い恋人達',
     publishDate: '2023/12/10',
     lastUpdatedDate: '2023/12/10',
@@ -34,7 +34,7 @@ export const articles: Article[] = [
   },
   {
     id: 3,
-    md: '0002.md',
+    md: '0001.md',
     title: 'ハミルトニアン難しいよ！（仮）',
     publishDate: '2023/12/10',
     lastUpdatedDate: '2023/12/10',
@@ -54,7 +54,7 @@ export const articles: Article[] = [
   },
   {
     id: 5,
-    md: '0002.md',
+    md: '0000.md',
     title: '双対定理について深く勉強したい（仮）',
     publishDate: '2023/12/10',
     lastUpdatedDate: '2023/12/10',
@@ -64,8 +64,8 @@ export const articles: Article[] = [
   },
   {
     id: 6,
-    md: '0002.md',
-    title: '中国剰余定理ってオーバーフローが怖いよね（仮）',
+    md: '0001.md',
+    title: '等差×等比の級数を行列累乗で求める（仮）',
     publishDate: '2023/12/10',
     lastUpdatedDate: '2023/12/10',
     eyecatch: '0000.jpg',

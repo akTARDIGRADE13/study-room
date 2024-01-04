@@ -20,7 +20,7 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
 
   return (
     <Link
-      to={`/study-room/blog/${article.category}/${article.md}`}
+      to={`/study-room/blog/${article.category}/${article.id}`}
       className={styles['article-link']}
     >
       <div className={styles['article-card']}>
