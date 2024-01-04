@@ -13,19 +13,25 @@ const title = import.meta.env.VITE_APP_TITLE;
 console.dir(import.meta.env);
 
 const Blog: FC = () => {
+  const domain = 'https://aktardigrade13.github.io/study-room';
+  const homeUrl = '/blog';
+  const mainText = 'blog';
+
   return (
     <>
-      <Helmet>
-        <meta
-          property="og:url"
-          content="https://aktardigrade13.github.io/study-room/blog"
-        />
-        <meta property="og:type" content="blog" />
-        <meta property="og:title" content="blog" />
-        <meta property="og:description" content="blog" />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={study} />
-      </Helmet>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: mainText },
+          { property: 'og:title', content: title },
+          { property: 'og:type', content: 'website' },
+          { property: 'og:url', content: `${domain}${homeUrl}/` },
+          { property: 'og:image', content: `${study}` },
+          { property: 'og:description', content: mainText },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:image', content: `${study}` },
+        ]}
+      />
       <Layout>
         <Container>
           <Hero title="Blog" subtitle="最近の記事" />

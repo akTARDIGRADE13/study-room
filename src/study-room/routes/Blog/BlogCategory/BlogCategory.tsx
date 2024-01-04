@@ -14,21 +14,25 @@ console.dir(import.meta.env);
 const BlogCategory: React.FC = () => {
   const { category } = useParams<{ category: string }>();
 
-  // カテゴリーに対応する記事データを取得するロジック
+  const domain = 'https://aktardigrade13.github.io/study-room';
+  const homeUrl = `/blog/${category}`;
+  const mainText = `blog/${category}`;
 
   return (
     <>
-      <Helmet>
-        <meta
-          property="og:url"
-          content={`https://aktardigrade13.github.io/study-room/${category}`}
-        />
-        <meta property="og:type" content="blog-category" />
-        <meta property="og:title" content={`blog-${category}`} />
-        <meta property="og:description" content={`blog-${category}`} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={study} />
-      </Helmet>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: mainText },
+          { property: 'og:title', content: title },
+          { property: 'og:type', content: 'website' },
+          { property: 'og:url', content: `${domain}${homeUrl}/` },
+          { property: 'og:image', content: `${study}` },
+          { property: 'og:description', content: mainText },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:image', content: `${study}` },
+        ]}
+      />
       <Layout>
         <Container>
           <Hero title="Blog" subtitle={category ?? 'Default Subtitle'} />

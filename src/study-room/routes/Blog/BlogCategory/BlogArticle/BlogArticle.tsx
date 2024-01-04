@@ -45,19 +45,25 @@ const BlogArticle: React.FC = () => {
     process.env.NODE_ENV === 'production' ? '/study-room' : ''
   }/articles/eyecatch/${selectedArticle?.eyecatch}`;
 
+  const domain = 'https://aktardigrade13.github.io/study-room';
+  const homeUrl = `/blog/${category}/${id}`;
+  const mainText = `blog/${category}/${id}`;
+
   return (
     <>
-      <Helmet>
-        <meta
-          property="og:url"
-          content={`https://aktardigrade13.github.io/study-room/${category}/${id}`}
-        />
-        <meta property="og:type" content={`article`} />
-        <meta property="og:title" content={`${selectedArticle?.title}`} />
-        <meta property="og:description" content={`blog-category${category}`} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={eyecatchImagePath} />
-      </Helmet>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: mainText },
+          { property: 'og:title', content: title },
+          { property: 'og:type', content: 'website' },
+          { property: 'og:url', content: `${domain}${homeUrl}/` },
+          { property: 'og:image', content: `${eyecatchImagePath}` },
+          { property: 'og:description', content: mainText },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:image', content: `${eyecatchImagePath}` },
+        ]}
+      />
       <Layout>
         <Container>
           <Hero title="Blog" subtitle={category ?? 'Default Subtitle'} />
