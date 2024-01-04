@@ -8,7 +8,6 @@ import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkToc from 'remark-toc';
-import study from 'study-room/images/study.jpg';
 import { articles } from 'study-room/Data';
 import Container from 'study-room/routes/components/Container';
 import Hero from 'study-room/routes/components/Hero';
@@ -42,6 +41,9 @@ const BlogArticle: React.FC = () => {
     : null;
 
   const markdownContent = useMdContent(mdPath ?? '');
+  const eyecatchImagePath = `${
+    process.env.NODE_ENV === 'production' ? '/study-room' : ''
+  }/articles/eyecatch/${selectedArticle?.eyecatch}`;
 
   return (
     <>
@@ -54,7 +56,7 @@ const BlogArticle: React.FC = () => {
         <meta property="og:title" content={`${selectedArticle?.title}`} />
         <meta property="og:description" content={`blog-category${category}`} />
         <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={study} />
+        <meta property="og:image" content={eyecatchImagePath} />
       </Helmet>
       <Layout>
         <Container>
