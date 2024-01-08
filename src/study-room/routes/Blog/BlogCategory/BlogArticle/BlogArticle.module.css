@@ -5,14 +5,19 @@
 }
   
 .article-title {
-    padding: 10px; /* タイトルの周りに余白を追加 */
-    font-weight: bold; /* 太字にする */
-    color: #333; /* タイトルの色を変更する */
-    background-color: #f0f0f0; /* タイトルの背景色 */
-    border: 2px solid #ddd; /* タイトルを囲む境界線 */
-    border-radius: 5px; /* タイトルを囲む境界線の角を丸くする */
+  padding: 10px;
+  margin: var(--space-xs);
+  font-weight: bold; /* 太字にする */
+  color: var(--gray-75) /* タイトルの色を変更する */;
+  text-align: center;
+  background-color: var(--gray-10); /* タイトルの背景色 */
+  border: 2px solid var(--gray-25); /* タイトルを囲む境界線 */
+  border-radius: 5px; /* タイトルを囲む境界線の角を丸くする */
+  }
 
-    /* 他にも適用したいスタイルがあれば追加してください */
+  .article-meta {
+    color: var(--gray-50);
+    text-align: center;
   }
   
   .content {
@@ -56,3 +61,39 @@
     margin-left: 20px;
   }
   
+  /* 定義リストスタイル */
+.content dl {
+  padding: 10px; /* 枠線内の余白を設定 */
+  margin-bottom: 20px;
+  border: 1px solid var(--accent); /* 枠線のスタイルを追加 */
+  border-radius: 5px; /* 枠線の角を丸める */
+}
+
+.content dt {
+  font-size: var(--heading3);
+  font-weight: bold;
+}
+
+.content dd {
+  margin-bottom: 10px;
+  margin-left: var(--space-md);
+}
+
+/* 追加部分 */
+.content p {
+  margin-bottom: 15px;
+}
+
+.content blockquote {
+  padding-left: 15px;
+  margin: 15px 0;
+  color: var(--gray-50);
+  border-left: 3px solid var(--accent);
+}
+
+.content hr {
+  height: 1px;
+  margin: 20px 0;
+  background-color: var(--gray25);
+  border: none;
+}
