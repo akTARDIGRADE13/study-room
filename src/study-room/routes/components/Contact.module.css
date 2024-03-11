@@ -5,3 +5,13 @@
 .heading {
   font-size: var(--body);
 }
+
+@media (width < 768px) {
+  .stack > * + * {
+    display: none;
+  }
+
+  .heading {
+    display: none;
+  }
+}

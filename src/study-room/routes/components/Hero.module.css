@@ -1,7 +1,10 @@
 .flex-container{
   /* stylelint-disable-next-line property-no-unknown */
   composes: side-by-side-center from './utils.module.css';
+  display: flex;
+  justify-content: flex-end;
   padding: var(--space-xs); /* 上下左右の余白調整 */
+  margin-top: var(--space-xs);
   color: var(--gray-50); /* テキストの色を黒に変更 */
   text-align: center;
   border: 1px solid #ddd; /* 軽いボーダーを追加 */
@@ -25,15 +28,17 @@
   font-size: var(--small-heading2);
 }
 
-/* image */
-.image {
-  width: 50%;
-  margin-top: var(--space-xs); /* 画像上部の余白調整 */
-  border-radius: 8px; /* 画像の角を丸くする */
+.image-container {
+  text-align: right;
 }
 
-@media (width >= 768px) {
-  .image {
-    width: 50%;
+.image {
+  width: 60%;
+  height: auto;
+}
+
+@media (width < 768px) {
+  .image-container {
+    display: none; /* 768px未満の場合は非表示にする */
   }
 }

@@ -21,19 +21,21 @@ const Nav: React.FC = () => {
         >
           Blog
         </NavLink>
-        <div className={styles['sub-menu']}>
-          {/* カテゴリーごとのリンク */}
-          {categoryNames.map((category, index) => (
-            <NavLink
-              key={index}
-              style={({ isActive }) =>
-                isActive ? { color: 'blue' } : undefined
-              }
-              to={`/study-room/blog/${category}`}
-            >
-              {category}
-            </NavLink>
-          ))}
+        <div className={styles['sub-menu-wrapper']}>
+          <div className={styles['sub-menu']}>
+            {/* カテゴリーごとのリンク */}
+            {categoryNames.map((category, index) => (
+              <NavLink
+                key={index}
+                style={({ isActive }) =>
+                  isActive ? { color: 'blue' } : undefined
+                }
+                to={`/study-room/blog/${category}`}
+              >
+                {category}
+              </NavLink>
+            ))}
+          </div>
         </div>
       </li>
     </ul>

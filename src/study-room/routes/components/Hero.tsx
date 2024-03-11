@@ -9,16 +9,6 @@ interface HeroProps {
 }
 
 const Hero: FC<HeroProps> = ({ title, subtitle, imageOn = false }) => {
-  const getImageWidth = () => {
-    const windowWidth = window.innerWidth;
-
-    return windowWidth >= 1152
-      ? '576px'
-      : windowWidth >= 768
-      ? '50vw'
-      : '100vw';
-  };
-
   return (
     <div className={styles['flex-container']}>
       <div className={styles.text}>
@@ -26,15 +16,12 @@ const Hero: FC<HeroProps> = ({ title, subtitle, imageOn = false }) => {
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       {imageOn && (
-        <figure className={styles.image}>
+        <figure className={styles['image-container']}>
           <img
+            className={styles.image}
             src={study}
             height={'auto'}
             alt="STUDY"
-            style={{
-              width: getImageWidth(),
-              maxWidth: '476px', // 最大幅
-            }}
           />
         </figure>
       )}

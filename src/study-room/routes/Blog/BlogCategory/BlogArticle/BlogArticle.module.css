@@ -56,9 +56,15 @@
   }
   
   /* リストスタイル */
-  .content ul,
+  .content ul {
+    margin-left: var(--space-md);
+    color: var(--gray-75);
+    list-style-type: square;
+  }
+
   .content ol {
-    margin-left: 20px;
+    margin-left: var(--space-md);
+    color: var(--gray-75);
   }
   
   /* 定義リストスタイル */
@@ -94,6 +100,13 @@
 .content hr {
   height: 1px;
   margin: 20px 0;
-  background-color: var(--gray25);
+  background-color: var(--gray-50);
   border: none;
+}
+
+/* 証明のスタイル */
+div.theorem {
+  padding: 10px;
+  border: 1px solid var(--gray-25);
+  border-radius: 5px;
 }

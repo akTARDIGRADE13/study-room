@@ -5,16 +5,16 @@
   --gray-25: #aaa;
   --gray-50: #707070;
   --gray-75: #444;
-  --black: #222;
+  --black: #333;
   --light-accent: #4caaed;
   --accent: #0d87e0;
   --dark-accent: #005580;
 
   /* タイポグラフィ（フォントサイズ） */
-  --small-body: clamp(0.8rem, 0.95rem + 0.2vw, 1.0rem);
+  --small-body: clamp(0.8rem, 0.7rem + 0.2vw, 1.0rem);
   --body: clamp(1.0rem, 0.95rem + 0.2vw, 1.5rem);
-  --display: clamp(4.5rem, 1.83rem + 11.34vw, 6rem);
-  --heading1: clamp(1.5rem, 1.3rem + 3vw, 2rem);
+  --display: clamp(3.0rem, 2.5rem + 5vw, 6rem);
+  --heading1: calc(var(--body) * 2.0);
   --heading2: calc(var(--body) * 1.5);
   --heading3: calc(var(--body) * 1.2);
   --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem);
@@ -39,14 +39,17 @@ body {
 
 h1 {
   font-size: var(--heading1);
+  color: var(--black);
 }
 
 h2 {
   font-size: var(--heading2);
+  color: var(--black);
 }
 
 h3 {
   font-size: var(--heading3);
+  color: var(--black);
 }
 
 /* next/image */

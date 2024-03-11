@@ -40,7 +40,11 @@ const RenderArticleInfo: React.FC<{ article: Article }> = ({ article }) => {
         >
           <h2 className={styles['article-title']}>{article.title}</h2>
           <p className={styles['article-date']}>
-            {formatDate(article.publishDate)}
+            {formatDate(
+              article.publishDate === article.lastUpdatedDate
+                ? article.publishDate
+                : article.lastUpdatedDate,
+            )}
           </p>
         </div>
       </div>
