@@ -110,3 +110,26 @@ div.theorem {
   border: 1px solid var(--gray-25);
   border-radius: 5px;
 }
+
+/* 追加部分（表のスタイル） */
+.content table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.content th,
+.content td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--gray-25);
+}
+
+.content th {
+  font-weight: bold;
+  background-color: var(--gray-10);
+}
+
+.content tbody tr:nth-child(even) {
+  background-color: var(--gray-5);
+}

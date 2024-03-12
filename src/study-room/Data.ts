@@ -4,11 +4,11 @@ export const articles: Article[] = [
   {
     id: 0,
     md: '0000.md',
-    title: '留数定理をちゃんと証明したい',
-    publishDate: '2024/03/02',
-    lastUpdatedDate: '2024/03/05',
+    title: 'C++のvector，array，その他データ構造の速度比較',
+    publishDate: '2024/03/12',
+    lastUpdatedDate: '2024/03/12',
     eyecatch: '0000.jpg',
-    category: '数学',
-    publish: false,
+    category: 'プログラミング',
+    publish: true,
   },
 ];
