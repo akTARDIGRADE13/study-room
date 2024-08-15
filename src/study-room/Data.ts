@@ -11,4 +11,14 @@ export const articles: Article[] = [
     category: 'プログラミング',
     publish: true,
   },
+  {
+    id: 1,
+    md: '0001.md',
+    title: '「現代の量子力学（上）」を読む～1.1～',
+    publishDate: '2024/08/15',
+    lastUpdatedDate: '2024/08/15',
+    eyecatch: '0000.jpg',
+    category: '物理',
+    publish: true,
+  },
 ];
