@@ -1,0 +1,10 @@
+.repo-link {
+    font-weight: bold; /* リンクを強調するために太字にする */
+    color: #1a73e8; /* Googleのリンク色に近い色 */
+    text-decoration: underline;
+}
+
+.repo-link:hover {
+    color: #0c47a1; /* ホバー時に少し暗い色に変える */
+    text-decoration: none; /* ホバー時に下線を消す */
+}

@@ -1,4 +1,7 @@
 # 僕の自習室
+
+[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://aktardigrade13.github.io/study-room/)
+
 自分が勉強したことをまとめておくサイト。
 
 数学、物理、最適化、プログラミング、etc.

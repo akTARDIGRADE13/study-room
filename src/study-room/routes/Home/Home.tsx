@@ -7,6 +7,7 @@ import Hero from 'study-room/routes/components/Hero';
 import Layout from 'study-room/routes/components/Layout';
 import PageBody from 'study-room/routes/components/PageBody';
 import TwoColumn from 'study-room/routes/components/TwoColumn';
+import styles from './Home.module.css';
 
 const title = import.meta.env.VITE_APP_TITLE;
 console.dir(import.meta.env);
@@ -50,7 +51,16 @@ const Home: FC = () => {
                 </p>
                 <h2> 読んでくださる方へ </h2>
                 <p>
-                  記事の誤植や内容の誤り等、何か気づいた点がございましたら、このサイトを管理しているリポジトリにIssueを立てるか、DMでご連絡いただけますと幸いです。
+                  記事の誤植や内容の誤り等、何か気づいた点がございましたら、このサイトを管理している
+                  <a
+                    href="https://github.com/akTARDIGRADE13/study-room"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles['repo-link']}
+                  >
+                    リポジトリ
+                  </a>
+                  にIssueを立てるか、DMでご連絡いただけますと幸いです。
                 </p>
               </PageBody>
             </TwoColumn>
