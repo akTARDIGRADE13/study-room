@@ -16,7 +16,7 @@ export const articles: Article[] = [
     md: '0001.md',
     title: '「現代の量子力学（上）」を読む～1.1～',
     publishDate: '2024/08/15',
-    lastUpdatedDate: '2024/08/15',
+    lastUpdatedDate: '2024/08/18',
     eyecatch: '0000.jpg',
     category: '物理',
     publish: true,
