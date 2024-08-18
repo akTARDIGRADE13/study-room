@@ -21,4 +21,14 @@ export const articles: Article[] = [
     category: '物理',
     publish: true,
   },
+  {
+    id: 2,
+    md: '0002.md',
+    title: '「現代の量子力学（上）」を読む～1.2～',
+    publishDate: '2024/08/18',
+    lastUpdatedDate: '2024/08/18',
+    eyecatch: '0000.jpg',
+    category: '物理',
+    publish: true,
+  },
 ];
