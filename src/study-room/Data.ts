@@ -46,7 +46,7 @@ export const articles: Article[] = [
     md: '0004.md',
     title: 'ICPC 2023 Asia Yokohama Regionalを全部解く',
     publishDate: '2024/09/23',
-    lastUpdatedDate: '2024/09/23',
+    lastUpdatedDate: '2024/11/04',
     eyecatch: '0000.jpg',
     category: 'プログラミング',
     publish: true,
